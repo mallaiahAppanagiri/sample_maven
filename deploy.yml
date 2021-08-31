@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: copy war file
+      copy: 
+        src: "{{ workspace }}"
+        dest: /opt/tomcat/webapps/
+        mode: u=rw,g=r,o=r

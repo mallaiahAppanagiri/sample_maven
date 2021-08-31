@@ -2,7 +2,10 @@
 - hosts: localhost
   become: true
   tasks:
-    - name: copy war file
+    - name: To remove the old content
+      shell: rm -rf /opt/tomcat/webapps/mavenweb.war && rm -rf /opt/tomcat/webapps/mavenweb
+      
+    - name: Deploy the war content
       copy: 
         src: "{{ workspace }}"
         dest: /opt/tomcat/webapps/

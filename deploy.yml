@@ -9,4 +9,4 @@
       copy: 
         src: "{{ workspace }}"
         dest: /opt/tomcat/webapps/
-        mode: u=rw,g=r,o=r
+        
